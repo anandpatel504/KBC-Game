@@ -1,4 +1,5 @@
 
+
 import pyttsx3
 engine = pyttsx3.init()
 engine.setProperty("rate",150)
@@ -57,24 +58,25 @@ while index<len(question_list):
 	ans=input("input your option number-")
 
 	if int(ans)==ans_key[index]:
-		print("congrates! aapka answer sahi hai aap",amount[index],"rupaye jeet gaye")
-		engine.say("congrates! aapka answer sahi hai aap"+str(amount[index])+"rupaye jeet gaye")
+		print("congrates! Your answer is correct you win",amount[index],"rupaye.")
+		engine.say("congrates! Your answer is correct you win"+str(amount[index])+"rupaye.")
 		engine.runAndWait()
 		print()
 
 	else:
-		print("aapka answer galat hai")
-		engine.say("aapka answer galat hai")
+		print("Your answer is wrong")
+		engine.say("Your answer is wrong")
 		engine.runAndWait()
 		print()
 		break
 	ans_list.append(ans)
 	index = index+1
 else:
-	print("Congrates! aap ek coror(10000000)rupaye jeet gaye hai")
-	engine.say("Congrates! aap ek coror(10000000)rupaye jeet gaye hai")
+	print("Congrates! you win (10000000)rupaye.")
+	engine.say("Congrates! you win 10000000)rupaye.")
 	engine.runAndWait()
 
 print("Total your right answer keys",ans_list)
 engine.say("Total your right answer keys",ans_list)
 engine.runAndWait()
+
